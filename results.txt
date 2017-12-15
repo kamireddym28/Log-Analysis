@@ -1,0 +1,19 @@
+Part 1:
+Three most popular articles of all times are:
+
+1 ) " candidate-is-jerk " ----> 338647 views
+2 ) " bears-love-berries " ----> 253801 views
+3 ) " bad-things-gone " ----> 170098 views
+
+Part 2:
+Most popular authors of all times are:
+
+1 ) Ursula La Multa ----> 507594 views
+2 ) Rudolf von Treppenwitz ----> 423457 views
+3 ) Anonymous Contributor ----> 170098 views
+4 ) Markoff Chaney ----> 84557 views
+
+Part 3:
+Days with more than 1% of requests lead to errors :
+
+On 2016-07-17 with 2.27 %
