@@ -33,7 +33,7 @@
  - Log into VM using ``` vagrant ssh ```
  - Load the database using ``` psql -d news -f newsdata.sql ```
 
- ###VIEWS Created**
+ ### VIEWS Created**
  - Part 1: 
  ``` 
 	CREATE VIEW popular_article as
@@ -83,7 +83,7 @@
 
  News database (newsdata.sql) was provided by Udacity
 
- ####Note:
+ #### Note:
  
  Vagrant and VirtualBox are the tools to install and manage the VM*
  
