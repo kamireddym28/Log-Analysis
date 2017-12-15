@@ -32,6 +32,7 @@
  - Bring the VM online using ``` vagrant up ``` 
  - Log into VM using ``` vagrant ssh ```
  - Load the database using ``` psql -d news -f newsdata.sql ```
+ - ``` import psycopg2 ``` is a module to connect to *** PostgreSQL *** , an open source RDBMS  
 
  ### VIEWS Created**
  - Part 1: 
