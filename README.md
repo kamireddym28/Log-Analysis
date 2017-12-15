@@ -4,9 +4,9 @@
 
 ## Requirements
 
- - **Python 2.7** or **Python 3.6** [Download](https://www.python.org/downloads/)
- - **Vagrant** [Download](https://www.vagrantup.com/)
- - **VirtualBox** [Download](https://www.virtualbox.org/wiki/Download_Old_Builds_5_1)
+ - [**Python 2.7** or **Python 3.6**](https://www.python.org/downloads/)
+ - [**Vagrant**](https://www.vagrantup.com/)
+ - [**VirtualBox**](https://www.virtualbox.org/wiki/Download_Old_Builds_5_1)
 
 ## Usage
 
