@@ -80,7 +80,7 @@
 	ORDER BY error_percent DESC;
  ```
  
-## Couresy
+## Courtesy
 
  News database (newsdata.sql) was provided by Udacity
 
