@@ -13,7 +13,7 @@ DBName = "news"
 
 # What are the most popular three articles of all time?
 '''\
-CREATE VIEW popular_article as
+CREATE OR REPLACE VIEW popular_article as
 SELECT articles.slug as most_popular_articles,
 COUNT(*) as views
 FROM log, articles
