@@ -37,12 +37,12 @@
  ### VIEWS Created**
  - Part 1: 
  ``` 
-	CREATE OR REPLACE VIEW popular_article as
-    	SELECT articles.slug as most_popular_articles, COUNT(*) as views
-    	FROM log, articles
-    	WHERE CONCAT('/article/',articles.slug)=log.path
-    	GROUP BY articles.slug
-    	ORDER BY views DESC limit 3;
+    CREATE OR REPLACE VIEW popular_article as
+    SELECT articles.slug as most_popular_articles, COUNT(*) as views
+    FROM log, articles
+    WHERE CONCAT('/article/',articles.slug)=log.path
+    GROUP BY articles.slug
+    ORDER BY views DESC limit 3;
  ```
  
  - Part 2:
