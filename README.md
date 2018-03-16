@@ -37,7 +37,7 @@
  ### VIEWS Created**
  - Part 1: 
  ``` 
-	CREATE VIEW popular_article as
+	CREATE OR REPLACE VIEW popular_article as
 	SELECT articles.slug as most_popular_articles, COUNT(*) as views
     FROM log, articles
     WHERE CONCAT('/article/',articles.slug)=log.path
@@ -47,7 +47,7 @@
  
  - Part 2:
  ```
-	CREATE VIEW popular_article_authors as
+	CREATE OR REPLACE VIEW popular_article_authors as
 	SELECT authors.name,count(*) as views
 	FROM authors, articles,log
 	WHERE articles.author=authors.id
@@ -58,20 +58,20 @@
  
  - Part 3:
  ```
-	CREATE VIEW error_log as
+	CREATE OR REPLACE VIEW error_log as
 	SELECT (date(time)) as unique_date, count(*) as error
 	FROM log
 	WHERE status like '%4%'
 	GROUP BY unique_date
 	ORDER BY error DESC;
 
-	CREATE VIEW total_log as
+	CREATE OR REPLACE VIEW total_log as
 	SELECT (date(time)) as unique_date, count(*) as status
 	FROM log
 	GROUP BY unique_date
 	ORDER BY status DESC;
 
-	CREATE VIEW percent_error_requests as
+	CREATE OR REPLACE VIEW percent_error_requests as
 	SELECT total_log.unique_date,
 	ROUND((100.0/(total_log.status/error_log.error)),2) as error_percent
 	FROM total_log, error_log
