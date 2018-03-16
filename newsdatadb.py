@@ -37,20 +37,20 @@ q2 = "SELECT * FROM popular_article_authors"
 
 # On which days did more than 1% of requests lead to errors?
 '''\
-CREATE VIEW error_log as
+CREATE OR REPLACE VIEW error_log as
 SELECT (date(time)) as unique_date, count(*) as error
 FROM log
 WHERE status like '%4%'
 GROUP BY unique_date
 ORDER BY error DESC;
 
-CREATE VIEW total_log as
+CREATE OR REPLACE VIEW total_log as
 SELECT (date(time)) as unique_date, count(*) as status
 FROM log
 GROUP BY unique_date
 ORDER BY status DESC;
 
-CREATE VIEW percent_error_requests as
+CREATE OR REPLACE VIEW percent_error_requests as
 SELECT total_log.unique_date,
 ROUND((100.0/(total_log.status/error_log.error)),2) as error_percent
 FROM total_log, error_log
