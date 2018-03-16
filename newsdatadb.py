@@ -25,7 +25,7 @@ q1 = "SELECT * FROM popular_article"
 
 # Who are the most popular article authors of all time?
 '''\
-CREATE VIEW popular_article_authors as
+CREATE OR REPLACE VIEW popular_article_authors as
 SELECT authors.name,count(*) as views
 FROM authors, articles,log
 WHERE articles.author=authors.id
